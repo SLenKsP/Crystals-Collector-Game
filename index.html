@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Crystals Collector!</title>
+    <!-- Bootstrap Link -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <!-- JQuery Link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Animate CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
+  </head>
+  <body>
+    <div class="container p-0">
+      <div class="row ">
+        <div
+          class="col-12 col-sm-8 offset-sm-2 bg-primary my-2 p-4 text-center text-light "
+        >
+          <h1 id="headerText" class="animated infinite bounce slow">
+            Crystal Collector!
+          </h1>
+        </div>
+      </div>
+      <div id="showBlockBtn">
+        <button id="showRules" type="button" class="btn btn-dark my-2 l-0">
+          rules
+        </button>
+
+        <div class="row ">
+          <div id="rules" class="col-sm-6 bg-secondary p-2 text-light">
+            <p class="ruleLine">
+              You will be given a random number at the start of the game.
+            </p>
+            <br />
+            <p class="ruleLine">
+              There are four crystals below. By clicking on a crystal you will
+              add a specific amount of points to your total score.
+            </p>
+            <br />
+            <p class="ruleLine">
+              You win the game by matching your total score to random number,
+              you lose the game if your total score goes above the random
+              number.
+            </p>
+            <br />
+            <p class="ruleLine">
+              The value of each crystal is hidden from you until you click on
+              it.
+            </p>
+            <br />
+            <p class="ruleLine">
+              Each time when the game starts, the game will change the values of
+              each crystal.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="scoreBlock">
+        <div class="row">
+          <div class="col-6 col-sm-6 offset-sm-2 offset-0">
+            <h1 id="score">Number:<span id="targetScore"></span></h1>
+          </div>
+          <div class="col-sm-3">
+            <div class="row">
+              <div class="col-sm-10">
+                <h1 id="win">Win: <span id="totalWin"></span></h1>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-10">
+                <h1 id="loss">Loss: <span id="totalLoss"></span></h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- Bootstrap Supported JS -->
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Local JS -->
+    <script src="assets/javascript/game.js"></script>
+  </body>
+</html>
