@@ -52,8 +52,19 @@
         </div>
       </div>
       <div id="showBlockBtn" class="w-100">
-        <button id="showRules" type="button" class="btn btn-dark my-2 l-0">
-          rules
+        <button
+          id="showRules"
+          type="button"
+          class="btn btn-dark my-2 l-0 font-weight-bold"
+        >
+          Rules
+        </button>
+        <button
+          id="resetAll"
+          type="button"
+          class="btn btn-warning my-2 float-right font-weight-bold"
+        >
+          Reset All
         </button>
 
         <div class="row w-100">
@@ -90,7 +101,7 @@
       </div>
       <div id="scoreBlock position-sticky">
         <div class="row">
-          <div class="col-6 col-sm-6 offset-sm-1 offset-0">
+          <div class="col-6 col-sm-5 offset-sm-1 offset-0">
             <div class="row ">
               <div class="col-6 col-sm-10">
                 <h1 id="score">Number:<span id="targetScore"></span></h1>
@@ -104,20 +115,22 @@
               </div>
             </div>
           </div>
-          <div class="outcome col-7 col-sm-3 bg-dark text-light">
+          <div class="outcome col-7 col-sm-5 bg-dark text-light">
             <div class="row">
-              <div class="col-6 col-sm-10 text-center">
+              <div class="col-6 col-sm-12 text-center">
                 <h1 id="status"></h1>
               </div>
             </div>
             <div class="row">
               <div class="col-6 col-sm-10">
-                <h1 id="win">Win: <span id="totalWin"></span></h1>
+                <h1 class="d-inline">Win:</h1>
+                <h1 class="d-inline" id="totalWin"></h1>
               </div>
             </div>
             <div class="row">
               <div class="col-6 col-sm-10">
-                <h1 id="loss">Loss: <span id="totalLoss"></span></h1>
+                <h1 class="d-inline">Loss:</h1>
+                <h1 class="d-inline" id="totalLoss"></h1>
               </div>
             </div>
           </div>
