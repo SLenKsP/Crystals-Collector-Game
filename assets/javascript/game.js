@@ -62,6 +62,13 @@ var reset = function() {
   $("#status").text("");
   numValuesOnConsole();
 };
+var masterReset = function() {
+  reset();
+  win = 0;
+  loss = 0;
+  $("#totalWin").text(win);
+  $("#totalLoss").text(loss);
+};
 
 // adding logic to html
 $(document).ready(function() {
@@ -130,4 +137,9 @@ $(document).ready(function() {
       // return newRnd;
     }
   }
+  // reset all
+  $("#resetAll").click(function(e) {
+    e.preventDefault();
+    masterReset();
+  });
 });
