@@ -10,4 +10,7 @@ $(document).ready(function() {
     $("rules").css("z-index", 1);
     $("rules").css("top", 0);
   });
+  $("#guessedNumber").text("hello");
+  $("#guessedNumber").css("background-color", "white");
+  $("#userScore").text("hello");
 });
