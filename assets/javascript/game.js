@@ -126,6 +126,10 @@ $(document).ready(function() {
       $("#totalWin").text(win);
       $("#status").text("YOU WON!");
       setTimeout(reset, 500);
+      //old set time out fn
+     /* setTimeout(function() {
+        reset();
+      }, 500);*/
       // newRnd = 1;
       // return newRnd;
     } else if (total > compGuess) {
@@ -133,6 +137,10 @@ $(document).ready(function() {
       $("#totalLoss").text(loss);
       $("#status").text("YOU LOST!");
       setTimeout(reset, 500);
+        //old set time out fn
+     /* setTimeout(function() {
+        reset();
+      }, 500);*/
       // newRnd = 0;
       // return newRnd;
     }
