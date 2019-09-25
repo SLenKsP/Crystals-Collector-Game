@@ -8,7 +8,8 @@ var num4 = 0;
 var num5 = 12;
 var win = 0;
 var loss = 0;
-var newRnd = 0;
+var newRnd = 0;// not in use
+
 // functions to generate 4 different random numbers
 var num1Val = function() {
   do {
@@ -34,6 +35,7 @@ var num4Val = function() {
   } while (num4 === num5 || num4 === num1 || num4 === num2 || num4 === num3);
   return num4;
 };
+
 // assigning random numbers to temp vars
 var tempNum1 = num1Val();
 var tempNum2 = num2Val();
@@ -62,6 +64,8 @@ var reset = function() {
   $("#status").text("");
   numValuesOnConsole();
 };
+
+// master reset function
 var masterReset = function() {
   reset();
   win = 0;
@@ -90,7 +94,6 @@ $(document).ready(function() {
   $("#totalLoss").text(loss);
 
   // crystal counting
-
   $("#crystal1").click(function(e) {
     e.preventDefault();
     total = tempNum1 + total;
@@ -115,29 +118,27 @@ $(document).ready(function() {
     $("#userScore").text(total);
     endresult();
   });
+  
   // result function (win/loss)
   function endresult() {
     if (total === compGuess) {
       win++;
       $("#totalWin").text(win);
       $("#status").text("YOU WON!");
-      setTimeout(function() {
-        reset();
-      }, 500);
+      setTimeout(reset, 500);
       // newRnd = 1;
       // return newRnd;
     } else if (total > compGuess) {
       loss++;
       $("#totalLoss").text(loss);
       $("#status").text("YOU LOST!");
-      setTimeout(function() {
-        reset();
-      }, 500);
+      setTimeout(reset, 500);
       // newRnd = 0;
       // return newRnd;
     }
   }
-  // reset all
+  
+  // master reset upon clicking on reset all button
   $("#resetAll").click(function(e) {
     e.preventDefault();
     masterReset();
